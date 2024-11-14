@@ -1,24 +1,27 @@
-package A_Plus_B;
+package week1.A_Plus_B;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Boj_11021_A_Plus_B7 {
+public class Boj_10952_A_Plus_B5 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine());
 
-        for (int i = 1; i <= T; i++) {
-
+        while (true) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            int sum = a + b;
-            System.out.println("Case #" + i + ": " + sum);
-        }
 
+            int a  = Integer.parseInt(st.nextToken());
+            int b  = Integer.parseInt(st.nextToken());
+
+            if ((a + b) == 0) {
+
+                break;
+            }
+
+            System.out.println(a + b);
+        }
     }
 }

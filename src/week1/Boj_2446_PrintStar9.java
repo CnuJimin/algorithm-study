@@ -1,8 +1,10 @@
+package week1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Boj_2445_PrintStar8 {
+public class Boj_2446_PrintStar9 {
 
     public static void main(String[] args) throws IOException {
 
@@ -12,25 +14,19 @@ public class Boj_2445_PrintStar8 {
         StringBuffer sb = new StringBuffer();
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < i; j++) {
-                sb.append("*");
-            }
-            for (int j = 0; j < 2 * (n - i); j++) {
+            for (int j = 1; j < i; j++) {
                 sb.append(" ");
             }
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < 2 * (n - i) + 1 ; j++) {
                 sb.append("*");
             }
             sb.append("\n");
         }
-        for (int i = 1; i <= n; i++) {
-            for (int j = n; j > i ; j--) {
-                sb.append("*");
-            }
-            for (int j = 1 ; j <= 2 * i; j ++ ) {
+        for (int i = 1; i < n; i++) {
+            for (int j = i + 1  ; j < n ; j++) {
                 sb.append(" ");
             }
-            for (int j = n; j > i ; j--) {
+            for (int j = 0  ; j < 2*i + 1 ; j ++) {
                 sb.append("*");
             }
             sb.append("\n");

@@ -1,17 +1,19 @@
-package output;
+package week1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Boj_11718_output1 {
+public class Boj_2742_NtnirP {
+
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str ;
-        StringBuffer sb = new StringBuffer();
-        while ((str = br.readLine()) != null) {
-            sb.append(str + "\n");
+
+        int num = Integer.parseInt(br.readLine());
+
+        for (int i = num; i >= 1; i--) {
+            System.out.println(i);
         }
-        System.out.println(sb);
     }
 }

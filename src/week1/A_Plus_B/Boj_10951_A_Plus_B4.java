@@ -1,4 +1,4 @@
-package A_Plus_B;
+package week1.A_Plus_B;
 
 import java.io.BufferedReader;
 import java.io.IOException;
