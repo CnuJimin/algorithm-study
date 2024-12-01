@@ -13,23 +13,19 @@ public class Boj_10814 {
         int N = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
 
-        StringTokenizer st;
-
-        Map<Integer, String> map = new HashMap<>();
-
-        int [] nums = new int[N];
+        List<String[]> list = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-            int num = Integer.parseInt(st.nextToken());
-            nums[i] = num;
-            map.put(num, st.nextToken());
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int age = Integer.parseInt(st.nextToken());
+            String name = st.nextToken();
+            list.add(new String[]{String.valueOf(age), name});
         }
 
-        Arrays.sort(nums);
+        list.sort(Comparator.comparingInt(a -> Integer.parseInt(a[0])));
 
-        for (int num : nums) {
-            sb.append(num).append(" ").append(map.get(num)).append("\n");
+        for (String[] strings : list) {
+            sb.append(strings[0]).append(" ").append(strings[1]).append("\n");
         }
 
         System.out.println(sb);
