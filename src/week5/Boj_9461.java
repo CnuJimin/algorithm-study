@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Boj9461 {
+public class Boj_9461 {
     //파도반 수열
     /*
     * 규칙: P(N) = P(N-2) + P(N-3)
