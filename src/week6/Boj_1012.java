@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Boj_1012 {
+    //유기농 배추
 
     static int T, M, N, K;
     static int count;
@@ -42,7 +43,7 @@ public class Boj_1012 {
 
             for (int i = 0; i < M; i++) {
                 for (int j = 0; j < N; j++) {
-                    if (graph[i][j] == 1 && !visit[i][j]) {
+                    if (graph[i][j] == 1 && !visit[i][j]) { // 배추가 있지만, 아직 탐색하지 않은 곳
                         dfs(i, j);
                         count++;
                     }
@@ -58,7 +59,7 @@ public class Boj_1012 {
 
         visit[x][y] = true;
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {// 상하좌우 탐색
             int nx = x + dx[i];
             int ny = y + dy[i];
 
